@@ -129,7 +129,7 @@ STATICFILES_DIRS=[BASE_DIR ,"assets",]
 #     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #     MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 # else:
-STATIC_ROOT = 'crops/static'
+STATIC_ROOT = 'static'
 MEDIA_ROOT = 'media'
 
 
