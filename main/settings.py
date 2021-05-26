@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=#=)%b)&_e=fzt_$d6p_xi2b95j=awc9l@g&rgo5cchm%%11mn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['cropprediction69.herokuapp.com']
 
@@ -122,16 +122,17 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+STATICFILES_DIRS=[BASE_DIR ,"/assets",]
 
 
-# if DEBUG == True:
-#     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-#     MEDIA_ROOT = os.path.join(BASE_DIR,'media')
-# else:
-#     STATIC_URL = '/static/'
-#     MEDIA_URL = '/media/'
+if DEBUG == True:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+else:
+    STATIC_ROOT = '/static'
+    MEDIA_ROOT = '/media'
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
