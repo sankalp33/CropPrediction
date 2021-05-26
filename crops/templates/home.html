@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+	<div class="m-5">
+		<h2 class="text-center font-weight-bold" style="color:#092756;">Crop Prediction </h2>
+	</div>
+	<hr width="50%" class=>
+	<h1 style="color: #092756;">{{output}}</h1>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 col-lg-4"></div>
+			<div class="col-md-12 col-lg-4 pt-5 mb-5" style="background: #092756;">
+					
+					<form action="/" method="POST">
+						{% csrf_token %}
+						<label>Nitrogen</label><br>
+						<input class="inputform" type="number" min="0" max="150" name="n"><br>
+						<label>Phosphorous </label><br>
+						<input class="inputform" type="number" min="5" max="150" name="p"><br>
+						<label>Potassium</label><br>
+						<input class="inputform" type="number" min="5" max="205" name="k"><br>
+						<label>Temperature</label><br>
+						<input class="inputform" type="number" min="8" max="44" step="0.0001" name="t"><br>
+						<label>Humidity</label><br>
+						<input class="inputform" type="number" min="14" max="100" step="0.0001" name="h"><br>
+						<label>ph</label><br>
+						<input class="inputform" type="number" min="3" max="10" step="0.0001" name="ph"><br>
+						<label>Rainfall</label><br>
+						<input class="inputform" type="number" min="20" max="300" step="0.0001" name="r"><br>
+						<button class="mt-5 btn btn-primary" type="submit" class="button">Predict</button><br>	
+					</form>
+					<br><br>
+				
+			</div>
+			<div class="col-md-12 col-lg-4"></div>
+		</div>
+	</div>
+	
+	
+	
+	{%endblock%}
