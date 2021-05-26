@@ -122,7 +122,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-STATICFILES_DIRS=[BASE_DIR ,"/assets",]
+STATICFILES_DIRS=[BASE_DIR ,"assets",]
 
 
 # if DEBUG == True:
