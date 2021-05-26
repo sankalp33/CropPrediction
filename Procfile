@@ -1,5 +1,1 @@
-web: gunicorn main.wsgi --log-file
-
-else;
-
-pip install pipenv
+web: gunicorn --bind 0.0.0.0:$PORT main:app
