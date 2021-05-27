@@ -10,3 +10,4 @@ sqlparse==0.4.1
 threadpoolctl==2.1.0
 typing-extensions==3.10.0.0
 gunicorn==19.0.0
+whitenoise
